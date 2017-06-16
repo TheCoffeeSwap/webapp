@@ -1,0 +1,559 @@
+
+
+<!DOCTYPE html>
+    <html class="no-js">
+    <head prefix="" itemscope itemtype="http://schema.org/WebSite">
+        <meta itemprop="name" content="">
+        <meta itemprop="url" content="https://">
+        <meta itemprop="image" content="https:///home-images/box.jpg">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <title>Activate Your Subscription</title>
+        <meta name="description" content="">
+
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+
+        <link rel="publisher" href="https://plus.google.com/108860704916491680261/">
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+		<link rel="stylesheet" media="all" href="//d1qeu4daemd51d.cloudfront.net/assets/application-5c394ce2c644d5042d15df2740341cae10bddb43d66fbe318d0eb11a1ed8ac19.css" data-turbolinks-track="true" />
+		<script src="//d1qeu4daemd51d.cloudfront.net/assets/application-ee602a1e753b16c7067a36d0cdfaa083fcf5e335ffe20fdd4acc94c5b112b7fd.js" data-turbolinks-track="true"></script>
+		<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="3nXdjsImTpN3jwbr29YDsHaAKrEGu4jW4ms+e/6yanDP+XQ28VMEv60GT/+/H83ARx30IAw2EEa8qEYL2/lkUA==" />
+
+            <meta name="current_user.id" content="22133" />
+            <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+    </head>
+    <body class="c-profile a-activate l- " data-sign-in-count="1" >
+        <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+            <div class="viewport">
+        <div class="content-container">
+            <header class="siteheader siteheader-onboard padded">
+
+    <a class="siteheader-emblem" data-track-click="Return home" data-track-description="" href="/">
+
+</a>
+</header>
+            
+
+
+            
+
+<header class="padded page-header page-header-small"
+    data-track-load="View My Account / Activate">
+    <h1 class="page-header-title">Activate Your Subscription</h1>
+</header>
+
+<form id="user-profile-form" class="center activate-form billing-form create-edit-form horizontal-form" data-stripe-publishable-key="pk_live_B6ravXgtKRDg7Y2tzUeWhuX0" action="/profile/activate" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="patch" /><input type="hidden" name="authenticity_token" value="mG5GlYosOKFsV4Q2akhGoJOv3orVc22qF8PyGeO5f8WJ4u8tuVlyjbbezSIOgYjQojIAG9/+9TpJAIppxvJx5Q==" />
+
+    <input name="authenticity_token" type="hidden" value="W/V/+mvPs1zlOgl8IossX7pj55HVjkyOkDxgIi+pCQ1KedZCWLr5cD+zQGhGQuIvi/45AN8D1B7O/xhSCuIHLQ==" />
+    
+    
+
+
+
+    <fieldset id="profile-shipping-address">
+	<legend class="hide-small">Where should we send your coffee?</legend>
+    <input type="hidden" name="user[shipping_address_forced]" class="profile-shipping-address-forced" />
+
+    <script id="address-verification-errors-template" type="x-tmpl-mustache">
+        <div class="form-group">
+            <div class="form-error">
+                <p>
+                    {{message}}
+                    <a class="address-verification-decline" style="text-decoration: underline;">Proceed anyway</a>
+                </p>
+            </div>
+        </div>
+    </script>
+    <div class="address-verification-errors" style="display: none;"></div>
+
+    <script id="address-verification-messages-template" type="x-tmpl-mustache">
+        <div class="form-group">
+            <div class="{{status}}">
+                <p>
+                    <strong>Weve scoured the earth and think this address is more accurate:</strong>
+                </p>
+                <p class="address">
+                    {{address_line_1}}<br/>
+                    {{address_line_2}}<br/>
+                </p>
+                <p>
+                    <a class="button address-verification-accept">Yes, thats me</a>
+                    <a class="address-verification-decline">No, use what I already entered</a>
+                </p>
+            </div>
+        </div>
+    </script>
+    <div class="address-verification-messages"></div>
+
+        <div class="form-group">
+            <label for="user_name">Name</label>
+            <input class="name" type="text" name="user[name]" id="user_name" />
+        </div>
+        <div class="form-group">
+            <label for="user_email">Email</label>
+            <input class="email" type="text" value="test22@test.com" name="user[email]" id="user_email" />
+        </div>
+
+	<div class="form-group">
+        <label for="user_shipping_street1">Address 1</label>
+        <input class="profile-address-1" type="text" name="user[shipping_street1]" id="user_shipping_street1" />
+    </div>
+    <div class="form-group">
+        <label for="user_shipping_street2">Address 2</label>
+        <input class="profile-address-2" type="text" name="user[shipping_street2]" id="user_shipping_street2" />
+    </div>
+    <div class="form-group form-group-3">
+        <label for="user_City / State / Zip">City / state / zip</label>
+        
+        <div class="form-sub-group">
+            <input class="profile-city" type="text" name="user[shipping_city]" id="user_shipping_city" />
+            <label for="user_shipping_city">City</label>
+        </div>
+        <div class="form-sub-group">
+                <select class="profile-state" name="user[shipping_state]" id="user_shipping_state"><option value=""></option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="PR">Puerto Rico</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+<option value="AA">Armed Forces, Americas</option>
+<option value="AE">Armed Forces, Europe</option>
+<option value="AP">Armed Forces, Pacific</option></select>
+            <label for="user_shipping_state">State</label>
+        </div>
+        <div class="form-sub-group">
+            <input class="profile-zip" type="text" name="user[shipping_postal_code]" id="user_shipping_postal_code" />
+            <label for="user_shipping_postal_code">Zip</label>
+        </div>
+    </div>
+    <div class="form-group" style="display: none;">
+        <label for="user_shipping_country">Country</label>
+            <select name="user[shipping_country]" id="user_shipping_country"><option value="AD">Andorra</option>
+<option value="AE">United Arab Emirates</option>
+<option value="AF">Afghanistan</option>
+<option value="AG">Antigua and Barbuda</option>
+<option value="AI">Anguilla</option>
+<option value="AL">Albania</option>
+<option value="AM">Armenia</option>
+<option value="AO">Angola</option>
+<option value="AQ">Antarctica</option>
+<option value="AR">Argentina</option>
+<option value="AS">American Samoa</option>
+<option value="AT">Austria</option>
+<option value="AU">Australia</option>
+<option value="AW">Aruba</option>
+<option value="AX">Åland Islands</option>
+<option value="AZ">Azerbaijan</option>
+<option value="BA">Bosnia and Herzegovina</option>
+<option value="BB">Barbados</option>
+<option value="BD">Bangladesh</option>
+<option value="BE">Belgium</option>
+<option value="BF">Burkina Faso</option>
+<option value="BG">Bulgaria</option>
+<option value="BH">Bahrain</option>
+<option value="BI">Burundi</option>
+<option value="BJ">Benin</option>
+<option value="BL">Saint Barthélemy</option>
+<option value="BM">Bermuda</option>
+<option value="BN">Brunei Darussalam</option>
+<option value="BO">Bolivia, Plurinational State of</option>
+<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+<option value="BR">Brazil</option>
+<option value="BS">Bahamas</option>
+<option value="BT">Bhutan</option>
+<option value="BV">Bouvet Island</option>
+<option value="BW">Botswana</option>
+<option value="BY">Belarus</option>
+<option value="BZ">Belize</option>
+<option value="CA">Canada</option>
+<option value="CC">Cocos (Keeling) Islands</option>
+<option value="CD">Congo, the Democratic Republic of the</option>
+<option value="CF">Central African Republic</option>
+<option value="CG">Congo</option>
+<option value="CH">Switzerland</option>
+<option value="CI">Côte d&#39;Ivoire</option>
+<option value="CK">Cook Islands</option>
+<option value="CL">Chile</option>
+<option value="CM">Cameroon</option>
+<option value="CN">China</option>
+<option value="CO">Colombia</option>
+<option value="CR">Costa Rica</option>
+<option value="CU">Cuba</option>
+<option value="CV">Cabo Verde</option>
+<option value="CW">Curaçao</option>
+<option value="CX">Christmas Island</option>
+<option value="CY">Cyprus</option>
+<option value="CZ">Czech Republic</option>
+<option value="DE">Germany</option>
+<option value="DJ">Djibouti</option>
+<option value="DK">Denmark</option>
+<option value="DM">Dominica</option>
+<option value="DO">Dominican Republic</option>
+<option value="DZ">Algeria</option>
+<option value="EC">Ecuador</option>
+<option value="EE">Estonia</option>
+<option value="EG">Egypt</option>
+<option value="EH">Western Sahara</option>
+<option value="ER">Eritrea</option>
+<option value="ES">Spain</option>
+<option value="ET">Ethiopia</option>
+<option value="FI">Finland</option>
+<option value="FJ">Fiji</option>
+<option value="FK">Falkland Islands (Malvinas)</option>
+<option value="FM">Micronesia, Federated States of</option>
+<option value="FO">Faroe Islands</option>
+<option value="FR">France</option>
+<option value="GA">Gabon</option>
+<option value="GB">United Kingdom of Great Britain and Northern Ireland</option>
+<option value="GD">Grenada</option>
+<option value="GE">Georgia</option>
+<option value="GF">French Guiana</option>
+<option value="GG">Guernsey</option>
+<option value="GH">Ghana</option>
+<option value="GI">Gibraltar</option>
+<option value="GL">Greenland</option>
+<option value="GM">Gambia</option>
+<option value="GN">Guinea</option>
+<option value="GP">Guadeloupe</option>
+<option value="GQ">Equatorial Guinea</option>
+<option value="GR">Greece</option>
+<option value="GS">South Georgia and the South Sandwich Islands</option>
+<option value="GT">Guatemala</option>
+<option value="GU">Guam</option>
+<option value="GW">Guinea-Bissau</option>
+<option value="GY">Guyana</option>
+<option value="HK">Hong Kong</option>
+<option value="HM">Heard Island and McDonald Islands</option>
+<option value="HN">Honduras</option>
+<option value="HR">Croatia</option>
+<option value="HT">Haiti</option>
+<option value="HU">Hungary</option>
+<option value="ID">Indonesia</option>
+<option value="IE">Ireland</option>
+<option value="IL">Israel</option>
+<option value="IM">Isle of Man</option>
+<option value="IN">India</option>
+<option value="IO">British Indian Ocean Territory</option>
+<option value="IQ">Iraq</option>
+<option value="IR">Iran, Islamic Republic of</option>
+<option value="IS">Iceland</option>
+<option value="IT">Italy</option>
+<option value="JE">Jersey</option>
+<option value="JM">Jamaica</option>
+<option value="JO">Jordan</option>
+<option value="JP">Japan</option>
+<option value="KE">Kenya</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="KH">Cambodia</option>
+<option value="KI">Kiribati</option>
+<option value="KM">Comoros</option>
+<option value="KN">Saint Kitts and Nevis</option>
+<option value="KP">Korea, Democratic People&#39;s Republic of</option>
+<option value="KR">Korea, Republic of</option>
+<option value="KW">Kuwait</option>
+<option value="KY">Cayman Islands</option>
+<option value="KZ">Kazakhstan</option>
+<option value="LA">Lao People&#39;s Democratic Republic</option>
+<option value="LB">Lebanon</option>
+<option value="LC">Saint Lucia</option>
+<option value="LI">Liechtenstein</option>
+<option value="LK">Sri Lanka</option>
+<option value="LR">Liberia</option>
+<option value="LS">Lesotho</option>
+<option value="LT">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="LV">Latvia</option>
+<option value="LY">Libya</option>
+<option value="MA">Morocco</option>
+<option value="MC">Monaco</option>
+<option value="MD">Moldova, Republic of</option>
+<option value="ME">Montenegro</option>
+<option value="MF">Saint Martin (French part)</option>
+<option value="MG">Madagascar</option>
+<option value="MH">Marshall Islands</option>
+<option value="MK">Macedonia, the former Yugoslav Republic of</option>
+<option value="ML">Mali</option>
+<option value="MM">Myanmar</option>
+<option value="MN">Mongolia</option>
+<option value="MO">Macao</option>
+<option value="MP">Northern Mariana Islands</option>
+<option value="MQ">Martinique</option>
+<option value="MR">Mauritania</option>
+<option value="MS">Montserrat</option>
+<option value="MT">Malta</option>
+<option value="MU">Mauritius</option>
+<option value="MV">Maldives</option>
+<option value="MW">Malawi</option>
+<option value="MX">Mexico</option>
+<option value="MY">Malaysia</option>
+<option value="MZ">Mozambique</option>
+<option value="NA">Namibia</option>
+<option value="NC">New Caledonia</option>
+<option value="NE">Niger</option>
+<option value="NF">Norfolk Island</option>
+<option value="NG">Nigeria</option>
+<option value="NI">Nicaragua</option>
+<option value="NL">Netherlands</option>
+<option value="NO">Norway</option>
+<option value="NP">Nepal</option>
+<option value="NR">Nauru</option>
+<option value="NU">Niue</option>
+<option value="NZ">New Zealand</option>
+<option value="OM">Oman</option>
+<option value="PA">Panama</option>
+<option value="PE">Peru</option>
+<option value="PF">French Polynesia</option>
+<option value="PG">Papua New Guinea</option>
+<option value="PH">Philippines</option>
+<option value="PK">Pakistan</option>
+<option value="PL">Poland</option>
+<option value="PM">Saint Pierre and Miquelon</option>
+<option value="PN">Pitcairn</option>
+<option value="PR">Puerto Rico</option>
+<option value="PS">Palestine, State of</option>
+<option value="PT">Portugal</option>
+<option value="PW">Palau</option>
+<option value="PY">Paraguay</option>
+<option value="QA">Qatar</option>
+<option value="RE">Réunion</option>
+<option value="RO">Romania</option>
+<option value="RS">Serbia</option>
+<option value="RU">Russian Federation</option>
+<option value="RW">Rwanda</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SB">Solomon Islands</option>
+<option value="SC">Seychelles</option>
+<option value="SD">Sudan</option>
+<option value="SE">Sweden</option>
+<option value="SG">Singapore</option>
+<option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+<option value="SI">Slovenia</option>
+<option value="SJ">Svalbard and Jan Mayen</option>
+<option value="SK">Slovakia</option>
+<option value="SL">Sierra Leone</option>
+<option value="SM">San Marino</option>
+<option value="SN">Senegal</option>
+<option value="SO">Somalia</option>
+<option value="SR">Suriname</option>
+<option value="SS">South Sudan</option>
+<option value="ST">Sao Tome and Principe</option>
+<option value="SV">El Salvador</option>
+<option value="SX">Sint Maarten (Dutch part)</option>
+<option value="SY">Syrian Arab Republic</option>
+<option value="SZ">Swaziland</option>
+<option value="TC">Turks and Caicos Islands</option>
+<option value="TD">Chad</option>
+<option value="TF">French Southern Territories</option>
+<option value="TG">Togo</option>
+<option value="TH">Thailand</option>
+<option value="TJ">Tajikistan</option>
+<option value="TK">Tokelau</option>
+<option value="TL">Timor-Leste</option>
+<option value="TM">Turkmenistan</option>
+<option value="TN">Tunisia</option>
+<option value="TO">Tonga</option>
+<option value="TR">Turkey</option>
+<option value="TT">Trinidad and Tobago</option>
+<option value="TV">Tuvalu</option>
+<option value="TW">Taiwan, Province of China</option>
+<option value="TZ">Tanzania, United Republic of</option>
+<option value="UA">Ukraine</option>
+<option value="UG">Uganda</option>
+<option value="UM">United States Minor Outlying Islands</option>
+<option selected="selected" value="US">United States of America</option>
+<option value="UY">Uruguay</option>
+<option value="UZ">Uzbekistan</option>
+<option value="VA">Holy See</option>
+<option value="VC">Saint Vincent and the Grenadines</option>
+<option value="VE">Venezuela, Bolivarian Republic of</option>
+<option value="VG">Virgin Islands, British</option>
+<option value="VI">Virgin Islands, U.S.</option>
+<option value="VN">Viet Nam</option>
+<option value="VU">Vanuatu</option>
+<option value="WF">Wallis and Futuna</option>
+<option value="WS">Samoa</option>
+<option value="YE">Yemen</option>
+<option value="YT">Mayotte</option>
+<option value="ZA">South Africa</option>
+<option value="ZM">Zambia</option>
+<option value="ZW">Zimbabwe</option></select>
+    </div>
+</fieldset>
+
+
+    <fieldset>
+        <legend>Credit Card</legend>
+
+
+            <p class="fieldset-help"><strong>gift<span class="hide-small"> card</span></strong>? <a href="/gifts/lookup">Redeem it</a>!</p>
+
+
+
+
+        <div class="credit-card-fields">
+
+    <script id="stripe-error-messages-template" type="x-tmpl-mustache">
+        <div class="form-group">
+            <div class="form-error">
+                {{#error}}
+                    <p>{{message}}</p>
+                {{/error}}
+            </div>
+        </div>
+    </script>
+    <div id="stripe-error-messages" style="display: none;"></div>
+
+    <div class="form-group">
+        <label for="billing-name">Cardholder Name</label>
+        <input id="billing-name" type="text" value="" size="20" data-stripe="name" placeholder="Johnny Appleseed"/>
+    </div>
+
+    <div class="form-group form-group-card-number">
+        <label for="billing-number">Card Number</label>
+        <input id="billing-number" type="text" size="20" data-stripe="number" placeholder="0000 0000 0000 0000" autocomplete="off" />
+
+        <div class="billing-cc-icons">
+            <img alt="Visa" class="cc-icon-visa" src="//d1qeu4daemd51d.cloudfront.net/assets/profile/icon-cc-visa-4619feaed108fa6ebede476bb174e75f59bf776e8ae97b57839d6dff48974706.svg" width="38" height="24" />
+            <img alt="Mastercard" class="cc-icon-mastercard" src="//d1qeu4daemd51d.cloudfront.net/assets/profile/icon-cc-mastercard-59e32ecefad2e8b087426984892ad0bfe90f0e904ce8f84db99db9fd586e0cc1.svg" width="38" height="24" />
+            <img alt="Discover" class="cc-icon-discover" src="//d1qeu4daemd51d.cloudfront.net/assets/profile/icon-cc-discover-46a63b29bd2628f63553c2afdb50642866dff3122fe84840ab4c3e80e13160c8.svg" width="38" height="24" />
+            <img alt="American Express" class="cc-icon-amex" src="//d1qeu4daemd51d.cloudfront.net/assets/profile/icon-cc-amex-69c295aeb5dc775f7eb83d88ff4d002a9701a56141b2fbdd8c6eec1e8fb51b44.svg" width="38" height="24" />
+        </div>
+    </div>
+
+    <div class="form-group form-group-4">
+        <label>Expiration</label>
+
+        <div class="form-sub-group">
+            <select id="billing-exp-month" data-stripe="exp-month">
+                <option value="01">1 - Jan</option>
+                <option value="02">2 - Feb</option>
+                <option value="03">3 - Mar</option>
+                <option value="04">4 - Apr</option>
+                <option value="05">5 - May</option>
+                <option value="06">6 - Jul</option>
+                <option value="07">7 - Jul</option>
+                <option value="08">8 - Aug</option>
+                <option value="09">9 - Sep</option>
+                <option value="10">10 - Oct</option>
+                <option value="11">11 - Nov</option>
+                <option value="12">12 - Dec</option>
+            </select>
+            <label for="billing-exp-month">Month</label>
+        </div>
+
+        <div class="form-sub-group">
+            <select id="billing-exp-year" data-stripe="exp-year">
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                <option value="2033">2033</option>
+                <option value="2034">2034</option>
+                <option value="2035">2035</option>
+            </select>
+            <label for="billing-exp-year">Year</label>
+        </div>
+    
+
+        <div class="form-sub-group">
+            <input id="billing-cvc" type="text" size="4" data-stripe="cvc" placeholder="123" autocomplete="off" />
+            <label for="billing-cvc">CVC Code</label>
+        </div>
+
+        <div class="form-sub-group">
+                <input type="text" id="billing_postal_code" placeholder="90210" data-stripe="address_zip" class="profile-zip" />
+            <label for="billing_postal_code">Billing Zip</label>
+        </div>
+    </div>
+
+</div>
+
+    </fieldset>
+
+
+    <fieldset>
+        <div class="form-group">
+            <input id="billing_submit" class="button large" type="submit" value="Activate Subscription" data-track-click="Activate Subscription" data-track-description="The Big Moment"></input>
+            <p class="disclaimer">By clicking “Activate Subscription” you confirm that your credit card will automatically be charged the stated price</p>
+        </div>
+    </fieldset>
+
+
+
+        </div>
+    </div>
+
+
+</html>
