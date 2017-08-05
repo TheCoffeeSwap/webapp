@@ -1,0 +1,24 @@
+    <%- include('header', {changeBKColor: true}) -%>
+    <!-- Intro Header change intro bg -->
+
+
+<div class="modal fade" id="payment_modal" tabindex="-1" role="dialog" aria-labelledby="#payment_modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="payment_modal"style="color:#7a766f">Payment Complete!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="color:#7a766f">
+        Your payment was successful. Check your email for a recipt and next steps!
+      </div>
+      <div class="modal-footer">
+        <a href="index.html" style="color:#fff"><button type="button" class="btn btn-colordefault" >Ok, I'm done!</button></a>
+        <button type="button" class="btn btn-filleddefault"><a style="color:#fff" href="profile_page.html">View Profile</a></button>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('footer') -%>

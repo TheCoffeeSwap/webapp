@@ -4,7 +4,9 @@
   "description": "Essentials for the web application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec babel-node server.js --ignore public/",
+    "dev": "webpack -wd",
+    "loadData": "babel-node loadTestdata.js"
   },
   "repository": {
     "type": "git",
@@ -17,20 +19,35 @@
   },
   "homepage": "https://github.com/TheCoffeeSwap/webapp#readme",
   "dependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "connect-mongo": "^1.3.2",
     "ejs": "^2.5.6",
     "express": "^4.15.3",
+    "express-session": "^1.15.5",
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.28",
+    "node-sass-middleware": "^0.11.0",
+    "npm": "^5.3.0",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-router": "^2.6.1"
+    "react-router": "^2.6.1",
+    "react-stripe-checkout": "^2.6.3",
+    "stripe": "^4.23.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-node6": "^11.0.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.3.0",
+    "eslint-plugin-react": "^7.1.0",
     "extract-text-webpack-plugin": "^2.1.2",
     "http-server": "^0.10.0",
+    "nodemon": "^1.11.0",
     "webpack": "^1.15.0"
   }
 }
