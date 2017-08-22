@@ -4,17 +4,18 @@ import React from 'react';
 import sassMiddleware from 'node-sass-middleware'
 import { Server } from 'http';
 import { renderToString } from 'react-dom/server';
-import { match, RouterContext } from 'react-router';
+import { StaticRouter as Router, matchPath } from 'react-router';
 import ejs from 'ejs';
 import bodyParser from 'body-parser';
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
 import config from './config';
 
-import Routes from './client/routes';
+// import Routes from './client/routes';
 import NotFoundPage from './client/components/NotFoundPage';
 import apiRouter from './server/api';
-
+import Signup from './client/components/SignupPage.js'
+import Profile from './client/components/ProfilePage.js'
 
 const appMongoStore = new MongoStore(session);
 const app = new Express();
@@ -23,7 +24,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'server/views'));
 
 // MiddleWares
-app.use(Express.static(path.join(__dirname, 'client/static')));
+app.use(Express.static('./client/static'));
 app.use(bodyParser.json())
 app.use(sassMiddleware({
   src: path.join(__dirname, 'client/static/sass'),
@@ -36,7 +37,6 @@ app.use(session({
   saveUninitialized: false
 }));
 app.use('/api', apiRouter);
-
 
 app.get('/', (req, res) => {
   res.render('index');
@@ -51,20 +51,20 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/get-started', (req, res) => {
-  res.render('get-started');
+  res.render('get-started', {initialMarkup:renderToString(<Signup />)});
 });
 
 app.get('/profile', (req, res) => {
-  res.render('profile');
+  res.render('profile', {initialMarkup:renderToString(<Profile />)});
 });
 
-// app.get('/', (req, res) => {
-// 	ejs.renderFile('homepage', {}, {}, function(err, str){
-//     console.log(str);
-//     res.render('index', { markup:str });  
-//   });
+app.get('/', (req, res) => {
+	ejs.renderFile('homepage', {}, {}, function(err, str){
+    console.log(str);
+    res.render('index', { markup:str });
+  });
 	
-// });
+});
 
 // app.get('*', (req, res) => {
 // 	match(

@@ -2,17 +2,23 @@ const webpack = require('webpack');
 const path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const nodeModulesDir  = path.resolve(__dirname, 'node_modules');
+
 module.exports = {
-  entry: path.join(__dirname, 'client', 'app-client.js'),
+  entry: {
+      signup: path.join(__dirname, 'client', 'get-started.js'),
+      profile: path.join(__dirname, 'client', 'profile.js'),
+  },
   output: {
     path: path.join(__dirname, 'client', 'static', 'js'),
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   module: {
     loaders: [
       {
-        test: path.join(__dirname, 'client'),
-        loader: ['babel-loader'],
+        test: /\.jsx?/,
+        loader: ['babel'],
+        exclude: [nodeModulesDir],
         query: {
           cacheDirectory: 'babel_cache',
           presets: ['react', 'es2015']
