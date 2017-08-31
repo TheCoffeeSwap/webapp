@@ -9,10 +9,10 @@ module.exports = {
       signup: path.join(__dirname, 'client', 'get-started.js'),
       profile: path.join(__dirname, 'client', 'profile.js'),
       style: [
-        path.join(__dirname, 'static', 'vendor/font-awesome/css/font-awesome.min.css'),
-        path.join(__dirname, 'static', 'vendor/google/gfonts.css'),
-        path.join(__dirname, 'static', 'vendor/google/gfonts-2.css'),
-        path.join(__dirname, 'static', 'vendor/css/grayscale.css')
+        path.join(__dirname, 'client/static/vendor/font-awesome/css/font-awesome.min.css'),
+        path.join(__dirname, 'client/static/vendor/google/gfonts.css'),
+        path.join(__dirname, 'client/static/vendor/google/gfonts-2.css'),
+        path.join(__dirname, 'client/static/css/grayscale.css')
       ]
   },
   output: {

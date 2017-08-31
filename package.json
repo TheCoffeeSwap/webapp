@@ -50,7 +50,7 @@
   "devDependencies": {
     "eslint": "^4.4.0",
     "eslint-plugin-react": "^7.1.0",
-    "extract-text-webpack-plugin": "^2.1.2",
+    "extract-text-webpack-plugin": "^1.0.1",
     "http-server": "^0.10.0",
     "nodemon": "^1.11.0",
     "webpack": "^1.15.0"
