@@ -1,14 +1,15 @@
 import React from 'react'
-import { Route, IndexRoute } from 'react-router';
-// import Layout from './components/Layout';
-// import IndexPage from './components/IndexPage';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Signup from './components/SignupPage';
+import Profile from './components/ProfilePage';
 import NotFoundPage from './components/NotFoundPage';
 
 const Routes = (
-  <Route path="/" >
-    <IndexRoute />
-    <Route path="*" component={NotFoundPage}/>
-  </Route>
+  	<Router>
+		<Route exact path="/" component={HomePage}/>
+		<Route path="/get-started" component={Signup}/>
+		<Route path="/profile" component={Profile}/>
+	</Router>
 );
 
 export default Routes;

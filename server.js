@@ -26,10 +26,6 @@ app.set('views', path.join(__dirname, 'server/views'));
 // MiddleWares
 app.use(Express.static('./client/static'));
 app.use(bodyParser.json())
-app.use(sassMiddleware({
-  src: path.join(__dirname, 'client/static/sass'),
-  dest: path.join(__dirname, 'client/static/newcss2'),
-}));
 app.use(session({
   secret: 'lamslamslmid@@#$(*&^&*',
   store: new appMongoStore({url: config.mongodbUri}),
@@ -61,7 +57,7 @@ app.get('/profile', (req, res) => {
 app.get('/', (req, res) => {
 	ejs.renderFile('homepage', {}, {}, function(err, str){
     console.log(str);
-    res.render('index', { markup:str });
+    res.render('index', { markup:str });  
   });
 	
 });

@@ -8,9 +8,15 @@ module.exports = {
   entry: {
       signup: path.join(__dirname, 'client', 'get-started.js'),
       profile: path.join(__dirname, 'client', 'profile.js'),
+      style: [
+        path.join(__dirname, 'static', 'vendor/font-awesome/css/font-awesome.min.css'),
+        path.join(__dirname, 'static', 'vendor/google/gfonts.css'),
+        path.join(__dirname, 'static', 'vendor/google/gfonts-2.css'),
+        path.join(__dirname, 'static', 'vendor/css/grayscale.css')
+      ]
   },
   output: {
-    path: path.join(__dirname, 'client', 'static', 'js'),
+    path: path.join(__dirname, 'public'),
     filename: '[name].js'
   },
   module: {
@@ -24,10 +30,17 @@ module.exports = {
           presets: ['react', 'es2015']
         }
       },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract({use: 'css-loader'})
+      }
     ]
   },
   plugins: [
-    // new ExtractTextPlugin("style.css"),
+    new ExtractTextPlugin({
+      filename: path.join(__dirname, 'public', 'style.css'),
+      allChunks: true
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV||'dev')
     }),

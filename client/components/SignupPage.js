@@ -9,7 +9,7 @@ class Signup extends React.Component {
         this.fieldValues = {};
         this.maxFieldsCount = 12;
 
-        this.state = { step: 1, count: 0 };
+        this.state = {step: 1, count: 0};
 
         this.saveValues = (fields) => {
           this.fieldValues = Object.assign({}, this.fieldValues, fields);
@@ -27,12 +27,14 @@ class Signup extends React.Component {
           else {
             return -1;
           }
+          window.scroll(0,0);
         };
 
         this.previousStep = () => {
           this.setState({
             step : this.state.step - 1
           })
+          window.scroll(0,0);
         };
     }
 
@@ -55,8 +57,6 @@ class Signup extends React.Component {
                 return <Payment fieldValues={this.fieldValues}                                  
                                  previousStep={this.previousStep}
                                  saveValues={this.saveValues} />
-            // case 4:
-            //     return <Success />
         }
     }
 

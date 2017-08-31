@@ -1,104 +1,109 @@
 import React from 'react';
 
-const Address = ({editAddress}) => {
-	return (
-		<section style={{marginLeft:'10%',marginRight:'10%',marginBottom:'10%'}}>
-	        <div className="col-lg-2 col-lg-offset-3">
-	            <div className="form-group row">
-		            <label htmlFor="Shipping_Name" className="getStartedColor col-3 col-form-label">First Name</label>
-		            <div className="col-3">
-		                <input onChange={editAddress} className="form-control" name="first_name" type="text" id="example-text-input" />
-		            </div>
-		            <label htmlFor="Shipping_Name" className="getStartedColor col-3 col-form-label">Last Name</label>
-		            <div className="col-3">
-		                <input onChange={editAddress} className="form-control" name="last_name" type="text" id="example-text-input" />
-		            </div>                
-		            <label htmlFor="Shipping_Name" className="getStartedColor col-3 col-form-label">Street Address</label>
-		            <div className="col-3">
-		                <input onChange={editAddress} className="form-control" type="text" name="address" id="example-text-input" />
-		            </div>
-		            <label htmlFor="Shipping_Name" className="getStartedColor col-3 col-form-label">State</label>
-		            <div className="col-3">
-		                <select className="form-control" id="user_shipping_state" name="state" onChange={editAddress}>
-		                <option value=""></option>
-						<option value="AL">Alabama</option>
-						<option value="AK">Alaska</option>
-						<option value="AZ">Arizona</option>
-						<option value="AR">Arkansas</option>
-						<option value="CA">California</option>
-						<option value="CO">Colorado</option>
-						<option value="CT">Connecticut</option>
-						<option value="DE">Delaware</option>
-						<option value="DC">District of Columbia</option>
-						<option value="FL">Florida</option>
-						<option value="GA">Georgia</option>
-						<option value="HI">Hawaii</option>
-						<option value="ID">Idaho</option>
-						<option value="IL">Illinois</option>
-						<option value="IN">Indiana</option>
-						<option value="IA">Iowa</option>
-						<option value="KS">Kansas</option>
-						<option value="KY">Kentucky</option>
-						<option value="LA">Louisiana</option>
-						<option value="ME">Maine</option>
-						<option value="MD">Maryland</option>
-						<option value="MA">Massachusetts</option>
-						<option value="MI">Michigan</option>
-						<option value="MN">Minnesota</option>
-						<option value="MS">Mississippi</option>
-						<option value="MO">Missouri</option>
-						<option value="MT">Montana</option>
-						<option value="NE">Nebraska</option>
-						<option value="NV">Nevada</option>
-						<option value="NH">New Hampshire</option>
-						<option value="NJ">New Jersey</option>
-						<option value="NM">New Mexico</option>
-						<option value="NY">New York</option>
-						<option value="NC">North Carolina</option>
-						<option value="ND">North Dakota</option>
-						<option value="OH">Ohio</option>
-						<option value="OK">Oklahoma</option>
-						<option value="OR">Oregon</option>
-						<option value="PA">Pennsylvania</option>
-						<option value="PR">Puerto Rico</option>
-						<option value="RI">Rhode Island</option>
-						<option value="SC">South Carolina</option>
-						<option value="SD">South Dakota</option>
-						<option value="TN">Tennessee</option>
-						<option value="TX">Texas</option>
-						<option value="UT">Utah</option>
-						<option value="VT">Vermont</option>
-						<option value="VA">Virginia</option>
-						<option value="WA">Washington</option>
-						<option value="WV">West Virginia</option>
-						<option value="WI">Wisconsin</option>
-						<option value="WY">Wyoming</option>
-						<option value="AA">Armed Forces, Americas</option>
-						<option value="AE">Armed Forces, Europe</option>
-						<option value="AP">Armed Forces, Pacific</option></select>
-		            </div>
-		        </div>
-		    </div>
+class Address extends React.Component {
+    constructor(props) {
+		super(props);
+	}
 
-            <div className="col-lg-2 col-lg-offset-2">
-                <div className="form-group row">
-                    <form className="form-inline">
-                    	<label  htmlFor="Shipping_Name" className="getStartedColor col-3 col-form-label">Email Address</label>
+	render() {
+		return (
+			<section style={{marginLeft:'10%',marginRight:'10%',marginBottom:'10%'}}>
+		        <div className="col-lg-2 col-lg-offset-3">
+		            <div className="form-group row">
+			            <label htmlFor="first_name" className="getStartedColor col-3 col-form-label">First Name</label>
+			            <div className="col-3">
+			                <input onChange={this.props.editAddress} className="form-control" name="first_name" type="text" id="example-text-input" required />
+			            </div>
+			            <label htmlFor="last_name" className="getStartedColor col-3 col-form-label">Last Name</label>
+			            <div className="col-3">
+			                <input onChange={this.props.editAddress} className="form-control" name="last_name" type="text" id="example-text-input" required  />
+			            </div>                
+			            <label htmlFor="address" className="getStartedColor col-3 col-form-label">Street Address</label>
+			            <div className="col-3">
+			                <input onChange={this.props.editAddress} className="form-control" type="text" name="address" id="example-text-input" required />
+			            </div>
+			            <label htmlFor="state" className="getStartedColor col-3 col-form-label">State</label>
+			            <div className="col-3">
+			                <select className="form-control" id="user_shipping_state" name="state" onChange={this.props.editAddress}>
+			                <option value=""></option>
+							<option value="AL">Alabama</option>
+							<option value="AK">Alaska</option>
+							<option value="AZ">Arizona</option>
+							<option value="AR">Arkansas</option>
+							<option value="CA">California</option>
+							<option value="CO">Colorado</option>
+							<option value="CT">Connecticut</option>
+							<option value="DE">Delaware</option>
+							<option value="DC">District of Columbia</option>
+							<option value="FL">Florida</option>
+							<option value="GA">Georgia</option>
+							<option value="HI">Hawaii</option>
+							<option value="ID">Idaho</option>
+							<option value="IL">Illinois</option>
+							<option value="IN">Indiana</option>
+							<option value="IA">Iowa</option>
+							<option value="KS">Kansas</option>
+							<option value="KY">Kentucky</option>
+							<option value="LA">Louisiana</option>
+							<option value="ME">Maine</option>
+							<option value="MD">Maryland</option>
+							<option value="MA">Massachusetts</option>
+							<option value="MI">Michigan</option>
+							<option value="MN">Minnesota</option>
+							<option value="MS">Mississippi</option>
+							<option value="MO">Missouri</option>
+							<option value="MT">Montana</option>
+							<option value="NE">Nebraska</option>
+							<option value="NV">Nevada</option>
+							<option value="NH">New Hampshire</option>
+							<option value="NJ">New Jersey</option>
+							<option value="NM">New Mexico</option>
+							<option value="NY">New York</option>
+							<option value="NC">North Carolina</option>
+							<option value="ND">North Dakota</option>
+							<option value="OH">Ohio</option>
+							<option value="OK">Oklahoma</option>
+							<option value="OR">Oregon</option>
+							<option value="PA">Pennsylvania</option>
+							<option value="PR">Puerto Rico</option>
+							<option value="RI">Rhode Island</option>
+							<option value="SC">South Carolina</option>
+							<option value="SD">South Dakota</option>
+							<option value="TN">Tennessee</option>
+							<option value="TX">Texas</option>
+							<option value="UT">Utah</option>
+							<option value="VT">Vermont</option>
+							<option value="VA">Virginia</option>
+							<option value="WA">Washington</option>
+							<option value="WV">West Virginia</option>
+							<option value="WI">Wisconsin</option>
+							<option value="WY">Wyoming</option>
+							<option value="AA">Armed Forces, Americas</option>
+							<option value="AE">Armed Forces, Europe</option>
+							<option value="AP">Armed Forces, Pacific</option></select>
+			            </div>
+			        </div>
+			    </div>
+
+	            <div className="col-lg-2 col-lg-offset-2">
+	                <div className="form-group row">
+	                	<label  htmlFor="email" className="getStartedColor col-3 col-form-label">Email Address</label>
 	                    <div className="col-3">
-	                    	<input onChange={editAddress} className="form-control" type="text" name="email" id="example-text-input" />
+	                    	<input onChange={this.props.editAddress} className="form-control" type="text" name="email" id="example-text-input" required />
+	                    	<span style={{color:'red', display:this.props.showEmailError?'block':'none'}}>Please provide valid email</span>
 	                    </div> 
-                    	<label  htmlFor="Shipping_Name" className="getStartedColor col-3 col-form-label">City</label>
-                    	<div className="col-3">
-                    		<input onChange={editAddress} className="form-control" name="city" type="text" id="example-text-input" />
-                    	</div>
-                    	<label  htmlFor="Shipping_Name" className="getStartedColor col-3 col-form-label"> Zip Code</label>
-                    	<div className="col-3">
-                    		<input onChange={editAddress} className="form-control" name="zipcode" type="text" id="example-text-input" />
-                    	</div>
-                    	<label  htmlFor="Shipping_Name" className="getStartedColor col-3 col-form-label">Country</label>
-                		<div className="col-3">
-                			<select onChange={editAddress} defaultValue="US" name="country" className="form-control" id="user_shipping_country">
-                			<option value=""></option>
+	                	<label  htmlFor="city" className="getStartedColor col-3 col-form-label">City</label>
+	                	<div className="col-3">
+	                		<input onChange={this.props.editAddress} className="form-control" name="city" type="text" id="example-text-input" required />
+	                	</div>
+	                	<label  htmlFor="zipcode" className="getStartedColor col-3 col-form-label"> Zip Code</label>
+	                	<div className="col-3">
+	                		<input onChange={this.props.editAddress} className="form-control" name="zipcode" type="text" id="example-text-input" required />
+	                	</div>
+	                	<label  htmlFor="country" className="getStartedColor col-3 col-form-label">Country</label>
+	            		<div className="col-3">
+	            			<select onChange={this.props.editAddress} defaultValue="US" name="country" className="form-control" id="user_shipping_country">
+	            			<option value=""></option>
 							<option value="AE">United Arab Emirates</option>
 							<option value="AF">Afghanistan</option>
 							<option value="AG">Antigua and Barbuda</option>
@@ -349,11 +354,11 @@ const Address = ({editAddress}) => {
 							<option value="ZW">Zimbabwe</option>
 							</select>
 						</div>
-					</form>
-                </div>
-	        </div>        
-	    </section>
-	);
+	                </div>
+		        </div>
+		    </section>
+		)
+	};
 };
 
-export default Address;
+export default Address;	

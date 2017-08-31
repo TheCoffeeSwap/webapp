@@ -4,7 +4,6 @@ import { MongoClient } from 'mongodb';
 import assert from 'assert';
 import config from '../../config';
 import moment from 'moment';
-import passport from 'passport';
 
 
 let mdb;
@@ -42,6 +41,10 @@ router.post('/userSignup', (req, res) => {
 	req.body['last_logged_in'] = moment().format();
 	mdb.collection('users').insert(req.body);
 	// and login here as well.
+	req.session.user = user;
+	res.send({
+		
+	})
 });
 
 export default router;
