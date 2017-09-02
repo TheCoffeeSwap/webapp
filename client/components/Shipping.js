@@ -14,7 +14,7 @@ class Shipping extends React.Component {
         this.maxValuesInShipping = 12;
 
         this.selectPlan = (event) => {
-            saveValues({plan: event.currentTarget.getAttribute('data-plan')});
+            this.props.saveValues({plan: event.currentTarget.getAttribute('data-plan')});
             document.getElementsByClassName('planform')[0].querySelectorAll('a').forEach(function(el){el.classList.remove('roasttype-border')});
             event.currentTarget.classList.add('roasttype-border');
         };

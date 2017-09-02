@@ -549,7 +549,7 @@ img::-moz-selection {
     padding: 40px 0;
     text-align: center;
     color: #7a766f;
-    bottom center no-repeat #000;
+    border: bottom center no-repeat #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -580,6 +580,7 @@ img::-moz-selection {
         color: #7a766f;
         padding-top: 20px;
     }
+}
 /*get started*/
 .roasttype-border{
   border:2px solid #f4bc42;

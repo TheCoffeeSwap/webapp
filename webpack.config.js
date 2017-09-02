@@ -1,19 +1,25 @@
 const webpack = require('webpack');
 const path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ProvidePlugin = require('webpack/lib/ProvidePlugin');
+
 
 const nodeModulesDir  = path.resolve(__dirname, 'node_modules');
+
 
 module.exports = {
   entry: {
       signup: path.join(__dirname, 'client', 'get-started.js'),
       profile: path.join(__dirname, 'client', 'profile.js'),
-      style: [
-        path.join(__dirname, 'client/static/vendor/font-awesome/css/font-awesome.min.css'),
-        path.join(__dirname, 'client/static/vendor/google/gfonts.css'),
-        path.join(__dirname, 'client/static/vendor/google/gfonts-2.css'),
-        path.join(__dirname, 'client/static/css/grayscale.css')
+      vendor: [
+        path.join(__dirname, 'client/static/vendor/bootstrap/js/bootstrap.min.js'),
+        path.join(__dirname, 'client/static/vendor/jquery/jquery.easing.min.js'),
       ]
+  },
+  resolve: {
+    alias: {
+      jquery: path.join(__dirname, 'client/static/vendor/jquery/jquery.min.js'),
+    }
   },
   output: {
     path: path.join(__dirname, 'public'),
@@ -23,29 +29,30 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?/,
-        loader: ['babel'],
-        exclude: [nodeModulesDir],
-        query: {
-          cacheDirectory: 'babel_cache',
-          presets: ['react', 'es2015']
-        }
+        loader: ['babel-loader'],
+        exclude: [nodeModulesDir]
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract({use: 'css-loader'})
-      }
+        loader: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader'})
+      },
+      {
+        test: /\.(jpe?g|gif|png|eot|svg|woff2?|ttf)$/,
+        loader: 'file-loader'
+      },
     ]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery'
+    }),
     new ExtractTextPlugin({
-      filename: path.join(__dirname, 'public', 'style.css'),
+      filename: 'style.css',
       allChunks: true
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV||'dev')
     }),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: { warnings: false },
       mangle: true,

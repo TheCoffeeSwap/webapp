@@ -24,7 +24,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'server/views'));
 
 // MiddleWares
-app.use(Express.static('./client/static'));
+app.use(Express.static('public'));
 app.use(bodyParser.json())
 app.use(session({
   secret: 'lamslamslmid@@#$(*&^&*',
